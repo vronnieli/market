@@ -1,0 +1,9 @@
+<h1>Products Index</h1>
+
+<% @products.each do |product| %>
+<%= link_to product.name, product_path(product) %>
+<%= product.unit_price %>
+<%= product.quantity %><br>
+<% end %>
+
+link product image to product page

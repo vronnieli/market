@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Market</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <% if logged_in? %>
+    Welcome <%= Buyer.find(session[:buyer_id]).name %>
+    <%= button_to "Sign Out", { action: "destroy", controller: "sessions", id: session[:buyer_id]}, method: :delete%> <br>
+    <%= link_to "Products Home", products_path %>
+    <%= link_to "Shopping Cart", shopping_cart_path(Buyer.find(session[:buyer_id]).shopping_carts.last) %>
+    <%= link_to "Order History", orders_path %>
+    <% else %>
+    <%= button_to "Sign In", { action: "new", controller: "sessions"}, method: :get%> <br>
+    <%= button_to "Sign Up", { action: "new", controller: "buyers"}, method: :get%> <br>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<h1>Order History</h1>
+<% @line_items.each do |key, value| %>
+Shopping Cart ID: <%= key %><br>
+<% cart = ShoppingCart.find(key.to_i) %>
+Order Date: <%= cart.updated_at %> <br>
+Order Total: $<%= cart.total %>
+<br>
+<br>
+<% value.each do |line_item| %>
+Product: <%= line_item.product.name %><br>
+Price: $<%= line_item.product.unit_price %><br>
+Quantity: <%= line_item.quantity %><br><br><br>
+<% end %>
+<% end %>
+
+
+<!-- {"4"=>#<ActiveRecord::Associations::CollectionProxy [#<LineItem id: 10, shopping_cart_id: 4, product_id: 1, quantity: 2, created_at: "2016-08-28 18:23:20", updated_at: "2016-08-28 18:30:38">]>, "5"=>#<ActiveRecord::Associations::CollectionProxy [#<LineItem id: 11, shopping_cart_id: 5, product_id: 2, quantity: 1, created_at: "2016-08-28 18:55:51", updated_at: "2016-08-28 18:55:51">]>} -->

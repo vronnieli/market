@@ -1,0 +1,12 @@
+<h1>Sign In Form</h1>
+
+<%= form_for @buyer, url: sessions_path do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<%= f.submit 'Sign In'%>
+<% end %>
+
+Not a user?
+<%= button_to "Sign Up", new_buyer_path(@buyer), method: :get %>

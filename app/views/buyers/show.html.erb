@@ -1,0 +1,8 @@
+<h1><%= @buyer.name %></h1>
+
+<% @shopping_carts.each do |cart| %>
+<%= cart.id %>
+<%= button_to "Show", shopping_cart_path(cart), method: :get %>
+<% end %>
+
+Show shopping carts

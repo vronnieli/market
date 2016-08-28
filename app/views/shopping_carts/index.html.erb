@@ -1,0 +1,8 @@
+<h1> Shopping Carts Index</h1>
+<% @shopping_carts.each do |cart| %>
+<%= cart.id %>
+<%= cart.buyer.name%>
+<%= button_to "Show", shopping_cart_path(cart), method: :get %>
+<br>
+
+<% end %>
