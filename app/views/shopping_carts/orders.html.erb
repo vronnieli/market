@@ -1,6 +1,6 @@
 <h1>Order History</h1>
 <% @line_items.each do |key, value| %>
-Shopping Cart ID: <%= key %><br>
+Transaction ID: <%= key %><br>
 <% cart = ShoppingCart.find(key.to_i) %>
 Order Date: <%= cart.updated_at.strftime('%b %d, %Y at %H:%M') %> <br>
 Order Total: $<%= cart.total %>

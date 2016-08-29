@@ -8,19 +8,21 @@
 <% @line_items.each do |item| %>
 <% if item.quantity > 0 %>
 Product Name: <%=  item.product.name %> <br>
-Price: $<%=  item.product.unit_price %>
+Price: $<%=  item.product.unit_price %>0
 <%=  form_for(item) do |f| %>
 <%= f.label "Quantity:" %>
-<%= f.number_field :quantity %> <br>
+<%= f.number_field :quantity %>
 <%= f.hidden_field :shopping_cart_id, value: @shopping_cart.id %>
-<%= f.submit "Update Quantity"%> <br>
-Total: $<%= item.total_price %> <br> <br>
+<%= f.submit "Update Quantity"%>
+<%= button_to "Delete Item", { action: "destroy", controller: "line_items"}, method: :delete, data: { confirm: "Are you sure?" } %>
+
+Total: $<%= item.total_price %>0 <br> <br>
 <% end %>
 <% end %>
 <% end %>
 
 
 <%= button_to "Reset Cart", { action: "destroy", controller: "shopping_carts"}, method: :delete, data: { confirm: "Are you sure?" } %> <br>
- Grand Total: $<%= @shopping_cart.total%> <br>
+ Grand Total: $<%= @shopping_cart.total%>0 <br>
 
 <%= button_to "Checkout", { action: "update" }, method: :patch, data: { confirm: "Make sure you update your basket before you checkout!" } %> <br>

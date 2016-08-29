@@ -1,9 +1,9 @@
-<h1><%= @product.name %></h1>
-
 <% if flash[:notice] %>
   <%= flash[:notice] %>
 <% end %>
-<br>
+
+<h1><%= @product.name %></h1>
+
 <%= image_tag(@product.image) %> <br> <br>
 Price: $<%= @product.unit_price %>0 <br>
 <%= @product.quantity %> in Stock

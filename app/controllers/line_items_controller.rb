@@ -34,6 +34,13 @@ class LineItemsController < ApplicationController
     end
   end
 
+  def destroy
+    line_item = LineItem.find(params[:id])
+    line_item.destroy
+    redirect_to shopping_cart_path(active_cart)
+
+  end
+
   # def reset
   #
   #   line_items = LineItem.where(shopping_cart_id: active_cart.id)
