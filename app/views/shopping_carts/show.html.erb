@@ -14,13 +14,13 @@ Price: $<%=  item.product.unit_price %>
 <%= f.number_field :quantity %> <br>
 <%= f.hidden_field :shopping_cart_id, value: @shopping_cart.id %>
 <%= f.submit "Update Quantity"%> <br>
-Total: $<%= item.total_price %>
+Total: $<%= item.total_price %> <br> <br>
 <% end %>
 <% end %>
 <% end %>
 
 
-<%= button_to "Reset Cart", { action: "reset", controller: "line_items"}, method: :patch, data: { confirm: "Are you sure?" } %> <br>
+<%= button_to "Reset Cart", { action: "destroy", controller: "shopping_carts"}, method: :delete, data: { confirm: "Are you sure?" } %> <br>
  Grand Total: $<%= @shopping_cart.total%> <br>
 
-<%= button_to "Checkout", { action: "update" }, method: :patch, data: { confirm: "Are you sure you want to checkout?" } %> <br>
+<%= button_to "Checkout", { action: "update" }, method: :patch, data: { confirm: "Make sure you update your basket before you checkout!" } %> <br>

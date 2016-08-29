@@ -5,7 +5,7 @@ root 'products#index'
 resources :products
 resources :shopping_carts, only: [:show, :destroy, :create, :update]
 resources :line_items
-resources :buyers, except: :destroy
+resources :buyers
 resources :sessions, only: [:new, :create, :destroy]
 
 get '/orders', to: 'shopping_carts#orders', as: 'orders'

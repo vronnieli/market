@@ -17,16 +17,29 @@ before_action :authorize
 
   def update
     @shopping_cart = active_cart
-    @shopping_cart.status = false
-    @shopping_cart.save
-    ShoppingCart.create(buyer_id: session[:buyer_id])
-    redirect_to '/'
+    no_stock = @shopping_cart.line_items.any? do |line_item|
+      line_item.product.quantity < line_item.quantity
+    end
+    if no_stock
+      redirect_to shopping_cart_path(@shopping_cart)
+      flash[:notice] = "There are not enough items in stock to satisfy your order."
+    else
+      @shopping_cart.line_items.each do |line_item|
+        line_item.product.quantity-= line_item.quantity
+        line_item.product.save
+      end
+      @shopping_cart.status = false
+      @shopping_cart.save
+      ShoppingCart.create(buyer_id: session[:buyer_id])
+      redirect_to '/'
+    end
   end
 
   def destroy
     shopping_cart = ShoppingCart.find(params[:id])
     shopping_cart.destroy
-    redirect_to shopping_carts_path
+    ShoppingCart.create(buyer_id: session[:buyer_id])
+    redirect_to '/'
   end
 
   def orders

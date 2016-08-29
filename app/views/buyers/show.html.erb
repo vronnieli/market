@@ -1,8 +1,11 @@
 <h1><%= @buyer.name %></h1>
 
-<% @shopping_carts.each do |cart| %>
-<%= cart.id %>
-<%= button_to "Show", shopping_cart_path(cart), method: :get %>
-<% end %>
+<!-- # <% @shopping_carts.each do |cart| %>
+# <%= cart.id %>
+# <%= button_to "Show", shopping_cart_path(cart), method: :get %>
+# <% end %> -->
 
-Show shopping carts
+<%= link_to "Edit Profile", edit_buyer_path(@buyer) %>
+<br>
+<br>
+<%= button_to "Delete Account", { action: "destroy", controller: "buyers"}, method: :delete, data: { confirm: "Are you sure you want to delete your account?" } %>

@@ -11,4 +11,13 @@ class ShoppingCart < ApplicationRecord
     end
     total
   end
+
+  def total_quantity
+    line_items = LineItem.where(shopping_cart_id: self.id)
+    total_quantity = 0
+    line_items.each do |line_item|
+      total_quantity += line_item.quantity
+    end
+    total_quantity
+  end
 end

@@ -2,15 +2,17 @@
 <% @line_items.each do |key, value| %>
 Shopping Cart ID: <%= key %><br>
 <% cart = ShoppingCart.find(key.to_i) %>
-Order Date: <%= cart.updated_at %> <br>
+Order Date: <%= cart.updated_at.strftime('%b %d, %Y at %H:%M') %> <br>
 Order Total: $<%= cart.total %>
 <br>
 <br>
 <% value.each do |line_item| %>
-Product: <%= line_item.product.name %><br>
-Price: $<%= line_item.product.unit_price %><br>
-Quantity: <%= line_item.quantity %><br><br><br>
-<% end %>
+
+  Product: <%= line_item.product.name %><br>
+  Price: $<%= line_item.product.unit_price %><br>
+  Quantity: <%= line_item.quantity %><br><br><br>
+
+  <%end %>
 <% end %>
 
 

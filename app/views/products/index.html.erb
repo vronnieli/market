@@ -1,9 +1,30 @@
 <h1>Products Index</h1>
-
+<!--
 <% @products.each do |product| %>
+
 <%= link_to product.name, product_path(product) %>
 <%= product.unit_price %>
 <%= product.quantity %><br>
-<% end %>
+<% end %> -->
 
-link product image to product page
+<br>
+<table style="width:80%">
+  <!-- <col align="center">
+  <col align="center">
+  <col align="center">
+  <col align="center"> -->
+  <tr>
+    <th> Product Name</th>
+    <th> Product Image</th>
+    <th> Product Price</th>
+    <th> Quantity in Stock</th>
+  </tr>
+  <% @products.each do |product| %>
+  <tr>
+    <td><%= link_to product.name, product_path(product) %></td>
+    <td><%= image_tag(product.image) %></td>
+    <td>$<%= product.unit_price %></td>
+    <td><%= product.quantity %></td>
+  </tr>
+  <% end %>
+</table>

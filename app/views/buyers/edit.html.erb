@@ -1,0 +1,9 @@
+<h1>Edit Your Profile</h1>
+
+<%= form_for(@buyer) do |f| %>
+<%= f.label "Change Name" %>
+<%= f.text_field :name %> <br>
+<%= f.label "Change Password:" %>
+<%= f.password_field :password %> <br>
+<%= f.submit "Update Profile" %>
+<% end %>

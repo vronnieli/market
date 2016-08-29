@@ -13,14 +13,28 @@ class BuyersController < ApplicationController
   end
 
   def show
-    @buyer = Buyer.find(params[:id])
-    @shopping_carts = @buyer.shopping_carts
+    if params[:id].to_i != current_buyer.id
+      redirect_to '/'
+    else
+      @buyer = Buyer.find(params[:id])
+      @shopping_carts = @buyer.shopping_carts
+    end
   end
 
   def edit
+    @buyer = Buyer.find(params[:id])
   end
 
   def update
+    buyer = Buyer.find(current_buyer.id)
+    buyer.update(buyer_params)
+    redirect_to buyer_path(buyer)
+  end
+
+  def destroy
+  current_buyer.delete
+  session[:buyer_id] = nil
+  redirect_to '/'
   end
 
 private

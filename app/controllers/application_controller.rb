@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  helper_method :logged_in?, :current_buyer
+  helper_method :logged_in?, :current_buyer, :active_cart
 
   def logged_in?
     session[:buyer_id] != nil

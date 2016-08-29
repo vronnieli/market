@@ -6,19 +6,51 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+    </style>
+
   </head>
 
   <body>
 
     <% if logged_in? %>
-    Welcome <%= Buyer.find(session[:buyer_id]).name %>
-    <%= button_to "Sign Out", { action: "destroy", controller: "sessions", id: session[:buyer_id]}, method: :delete%> <br>
-    <%= link_to "Products Home", products_path %>
-    <%= link_to "Shopping Cart", shopping_cart_path(Buyer.find(session[:buyer_id]).shopping_carts.last) %>
-    <%= link_to "Order History", orders_path %>
+  <ul>
+    <li><%= link_to "Sign Out", session_path(session[:buyer_id]), method: :delete %></li>
+    <li><%= link_to "Products Home", products_path %></li>
+    <li style="float:right"><%= link_to "Buyer Profile", buyer_path(current_buyer) %></li>
+    <li style="float:right"><%= link_to image_tag('trolley.png', size: '12x12') + " Shopping Cart (#{active_cart.products.count})", shopping_cart_path(Buyer.find(session[:buyer_id]).shopping_carts.last) %></li>
+    <li style="float:right"><%= link_to "Order History", orders_path %></li>
+  </ul>
+    <h3>Welcome <%= Buyer.find(session[:buyer_id]).name %></h3>
     <% else %>
-    <%= button_to "Sign In", { action: "new", controller: "sessions"}, method: :get%> <br>
-    <%= button_to "Sign Up", { action: "new", controller: "buyers"}, method: :get%> <br>
+  <ul>
+    <li><%= link_to "Sign In", new_session_path %></li>
+    <li><%= link_to "Sign Up", new_buyer_path %></li>
+  </ul>
     <% end %>
 
     <%= yield %>

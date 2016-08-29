@@ -10,6 +10,7 @@ before_action :authorize, only: [:destroy]
       session[:buyer_id] = buyer.id
       redirect_to '/'
     else
+      @buyer = Buyer.new
       render 'new'
     end
   end

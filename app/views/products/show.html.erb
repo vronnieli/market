@@ -1,7 +1,14 @@
 <h1><%= @product.name %></h1>
 
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+<br>
+<%= image_tag(@product.image) %> <br> <br>
 Price: $<%= @product.unit_price %> <br>
-Quantity in Stock: <%= @product.quantity %>
+<%= @product.quantity %> in Stock
+<br>
+<br>
 <% if logged_in? %>
 
 <%= form_for(@line_item) do |f| %>
