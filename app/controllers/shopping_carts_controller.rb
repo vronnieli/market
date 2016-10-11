@@ -1,4 +1,3 @@
-require 'pry'
 class ShoppingCartsController < ApplicationController
 before_action :authorize
 
