@@ -26,7 +26,16 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: market
+  database: market_development
+  pool: 5
+  username: veronicali
+  password:
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: market_production
   pool: 5
   username: veronicali
   password:
@@ -35,7 +44,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: market
+  database: market_test
   pool: 5
   username: veronicali
   password:
