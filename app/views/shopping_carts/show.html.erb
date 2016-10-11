@@ -14,10 +14,10 @@ Price: $<%=  item.product.unit_price %>0
 <%= f.number_field :quantity %>
 <%= f.hidden_field :shopping_cart_id, value: @shopping_cart.id %>
 <%= f.submit "Update Quantity"%>
+<% end %>
 <%= button_to "Delete Item", { action: "destroy", controller: "line_items"}, method: :delete, data: { confirm: "Are you sure?" } %>
 
 Total: $<%= item.total_price %>0 <br> <br>
-<% end %>
 <% end %>
 <% end %>
 
