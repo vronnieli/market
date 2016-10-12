@@ -3,13 +3,13 @@
 Transaction ID: <%= key %><br>
 <% cart = ShoppingCart.find(key.to_i) %>
 Order Date: <%= cart.updated_at.strftime('%b %d, %Y at %H:%M') %> <br>
-Order Total: $<%= cart.total %>
+Order Total: $<%= cart.total %>0
 <br>
 <br>
 <% value.each do |line_item| %>
 <%if line_item.quantity > 0 %>
   Product: <%= line_item.product.name %><br>
-  Price: $<%= line_item.product.unit_price %><br>
+  Price: $<%= line_item.product.unit_price %>0<br>
   Quantity: <%= line_item.quantity %><br><br><br>
 <% end %>
   <%end %>

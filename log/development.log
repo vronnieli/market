@@ -18380,3 +18380,442 @@ Processing by ShoppingCartsController#orders as HTML
 Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for ::1 at 2016-10-12 05:07:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (331.9ms)
+  [1m[36mBuyer Load (1.3ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 499ms (ActiveRecord: 10.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Buyer with 'id'=7):
+  
+app/controllers/application_controller.rb:11:in `current_buyer'
+app/views/layouts/application.html.erb:44:in `_app_views_layouts_application_html_erb___1701148526584017713_70300646429580'
+  Rendering /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/veronicali/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.0ms)
+Started GET "/" for ::1 at 2016-10-12 05:08:02 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-12 05:09:40 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-12 05:11:12 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-12 05:15:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-10-12 05:15:12 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-12 05:15:16 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-10-12 05:15:32 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2016-10-12 05:15:34 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 42ms (Views: 34.5ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/sessions" for ::1 at 2016-10-12 05:15:42 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aLDoLi9+3xdRl1aF+TB82+5A1BfxOvf40UC8ZxengVMnzbswJ9iMT/9enJUplVaiE5WhKVg4PJi/xlqYS6r9TQ==", "buyer"=>{"name"=>"vronnieli", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mBuyer Load (2.2ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."name" = $1 LIMIT $2[0m  [["name", "vronnieli"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-12 05:15:42 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.1ms)
+  [1m[36mBuyer Load (0.3ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (2.6ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (1.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 75.2ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:15:44 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.6ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (1.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (35.9ms)
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 58.3ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/shopping_carts/4" for ::1 at 2016-10-12 05:15:48 -0400
+Processing by ShoppingCartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBuyer Load (0.8ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (1.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  Rendering shopping_carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  Rendered shopping_carts/show.html.erb within layouts/application (4.8ms)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 39.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/buyers/1" for ::1 at 2016-10-12 05:16:13 -0400
+Processing by BuyersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (0.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBuyer Load (0.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buyers/show.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1[0m  [["buyer_id", 1]]
+  Rendered buyers/show.html.erb within layouts/application (4.6ms)
+  [1m[36mShoppingCart Load (1.8ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 33.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/buyers/1/edit" for ::1 at 2016-10-12 05:16:17 -0400
+Processing by BuyersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (1.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBuyer Load (2.2ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering buyers/edit.html.erb within layouts/application
+  Rendered buyers/edit.html.erb within layouts/application (2.1ms)
+  [1m[36mShoppingCart Load (1.0ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 34.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:16:19 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.6ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (1.1ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (9.2ms)
+  [1m[36mShoppingCart Load (1.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 40.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/shopping_carts/4" for ::1 at 2016-10-12 05:16:23 -0400
+Processing by ShoppingCartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBuyer Load (0.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (7.9ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  Rendering shopping_carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  Rendered shopping_carts/show.html.erb within layouts/application (10.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 47.5ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:16:25 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.5ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.6ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (9.8ms)
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 40.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:16:30 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (1.9ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (6.3ms)
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 34.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:16:32 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (8.6ms)
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 32.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/shopping_carts/4" for ::1 at 2016-10-12 05:16:35 -0400
+Processing by ShoppingCartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBuyer Load (0.5ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  Rendering shopping_carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  Rendered shopping_carts/show.html.erb within layouts/application (5.6ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 45.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:16:36 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.3ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (5.2ms)
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 37.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/products" for ::1 at 2016-10-12 05:16:37 -0400
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.2ms)
+  [1m[36mBuyer Load (0.3ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/1" for ::1 at 2016-10-12 05:16:39 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts"[0m
+  Rendered products/show.html.erb within layouts/application (7.8ms)
+  [1m[36mBuyer Load (0.3ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 35.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/shopping_carts/4" for ::1 at 2016-10-12 05:16:41 -0400
+Processing by ShoppingCartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBuyer Load (0.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  Rendering shopping_carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  Rendered shopping_carts/show.html.erb within layouts/application (5.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 31.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:16:44 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.5ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.7ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (6.7ms)
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 34.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/shopping_carts/4" for ::1 at 2016-10-12 05:16:44 -0400
+Processing by ShoppingCartsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBuyer Load (0.6ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  Rendering shopping_carts/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  Rendered shopping_carts/show.html.erb within layouts/application (5.7ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 32.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:16:45 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.5ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (5.3ms)
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 36.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:17:13 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.4ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (5.9ms)
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/orders" for ::1 at 2016-10-12 05:17:48 -0400
+Processing by ShoppingCartsController#orders as HTML
+  [1m[36mBuyer Load (0.3ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2[0m  [["buyer_id", 1], ["status", false]]
+  Rendering shopping_carts/orders.html.erb within layouts/application
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shopping_carts/orders.html.erb within layouts/application (5.1ms)
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 AND "shopping_carts"."status" = $2 ORDER BY "shopping_carts"."id" ASC LIMIT $3[0m  [["buyer_id", 1], ["status", true], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "line_items" ON "products"."id" = "line_items"."product_id" WHERE "line_items"."shopping_cart_id" = $1[0m  [["shopping_cart_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."buyer_id" = $1 ORDER BY "shopping_carts"."id" DESC LIMIT $2[0m  [["buyer_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 37.2ms | ActiveRecord: 3.2ms)
+
+
